@@ -25,25 +25,25 @@ const Gallery = () => {
   const videos = [
     {
       title: "Hope Foundation - Year in Review 2024",
-      thumbnail: heroImage,
+      src: heroImage,
       duration: "5:32",
       description: "A comprehensive look at our achievements and impact in 2024"
     },
     {
       title: "Education Campaign Success Stories",
-      thumbnail: educationImage,
+      src: educationImage,
       duration: "3:45",
       description: "Meet the children whose lives were transformed through education"
     },
     {
       title: "Healthcare Initiative Documentary",
-      thumbnail: healthcareImage,
+      src: healthcareImage,
       duration: "7:20",
       description: "Bringing quality healthcare to remote communities"
     },
     {
       title: "Volunteer Testimonials",
-      thumbnail: volunteersImage,
+      src: volunteersImage,
       duration: "4:15",
       description: "Our volunteers share their inspiring experiences"
     }
@@ -110,7 +110,7 @@ const Gallery = () => {
                     <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
                       <div className="relative aspect-video overflow-hidden group cursor-pointer">
                         <img 
-                          src={video.thumbnail} 
+                          src={video.src} 
                           alt={video.title} 
                           className="w-full h-full object-cover"
                         />
@@ -162,10 +162,10 @@ const Gallery = () => {
                   <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
                     <div className="relative aspect-video overflow-hidden group cursor-pointer">
                       <img 
-                        src={video.thumbnail} 
-                        alt={video.title} 
-                        className="w-full h-full object-cover"
-                      />
+                          src={video.src} 
+                          alt={video.title} 
+                          className="w-full h-full object-cover"
+                        />
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
                         <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center">
                           <Play size={32} fill="currentColor" />

@@ -26,7 +26,7 @@ const Contact = () => {
       return;
     }
 
-    // Note: Form submission will be connected to backend when Lovable Cloud is enabled
+  // TODO: Connect form submission to backend API
     toast.success("Thank you for contacting us! We'll respond within 24 hours.");
     console.log("Contact form submitted:", formData);
     

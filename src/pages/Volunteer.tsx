@@ -54,7 +54,7 @@ const Volunteer = () => {
       return;
     }
 
-    // Note: Form submission will be connected to backend when Lovable Cloud is enabled
+  // TODO: Connect form submission to backend API
     toast.success("Thank you for your interest! We'll contact you soon.");
     console.log("Volunteer form submitted:", formData);
   };
