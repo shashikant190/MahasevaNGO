@@ -67,7 +67,7 @@ const CSR = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-foreground">Why Partner with Hope Foundation?</h2>
+            <h2 className="text-4xl font-bold mb-4 text-foreground">Why Partner with Mahaseva Sahayog Foundation?</h2>
             <p className="text-lg text-muted-foreground">
               We offer transparent, impactful, and compliant CSR solutions that align with your corporate values.
             </p>
@@ -217,16 +217,16 @@ const CSR = () => {
                   <Link to="/contact">Schedule a Meeting</Link>
                 </Button>
                 <Button 
-                  variant="outline" 
+                  variant="hero" 
                   size="lg" 
-                  className="border-2 border-white text-white hover:bg-white/20 text-lg px-8"
+                  className="bg-white text-primary hover:bg-white/90 text-lg px-8"
                   asChild
                 >
-                  <a href="mailto:csr@hopefoundation.org">Email Us</a>
+                  <a href="mailto:csr@mahasevasahayog.org">Email Us</a>
                 </Button>
               </div>
               <p className="text-sm mt-6 text-white/80">
-                📧 csr@hopefoundation.org | ☎ +91 22 1234 5678
+                📧 csr@mahasevasahayog.org | ☎ +91 22 1234 5678
               </p>
             </CardContent>
           </Card>

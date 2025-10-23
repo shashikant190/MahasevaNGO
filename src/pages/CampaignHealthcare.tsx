@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowLeft, Heart, Activity, Stethoscope, Pill } from "lucide-react";
+import { ArrowLeft, Activity, Stethoscope, Pill } from "lucide-react";
 import healthcareImage from "@/assets/campaign-healthcare.jpg";
 import { useRazorpay } from "@/hooks/useRazorpay";
 import { toast } from "sonner";
@@ -110,7 +110,7 @@ const CampaignHealthcare = () => {
                 <h3 className="text-xl font-bold mb-3 mt-6 text-foreground">Campaign Goals</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <Heart className="text-secondary mt-1 flex-shrink-0" size={20} />
+                    <span className="mt-1 flex-shrink-0 text-secondary">•</span>
                     <span>Conduct 50 free medical camps in rural areas</span>
                   </li>
                   <li className="flex items-start gap-2">
@@ -158,11 +158,12 @@ const CampaignHealthcare = () => {
                               key={amount}
                               type="button"
                               onClick={() => {
+                                // populate the custom amount input when a preset is selected
                                 setDonationAmount(amount);
-                                setCustomAmount("");
+                                setCustomAmount(amount);
                               }}
                               className={`py-3 rounded-lg border-2 font-semibold transition-all ${
-                                donationAmount === amount && !customAmount
+                                customAmount === amount
                                   ? "border-secondary bg-secondary text-secondary-foreground"
                                   : "border-border hover:border-secondary"
                               }`}

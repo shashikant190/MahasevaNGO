@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Heart, Users, Clock, Award } from "lucide-react";
+import { Users, Clock, Award } from "lucide-react";
 import { toast } from "sonner";
 import volunteersImage from "@/assets/volunteers.jpg";
 
@@ -89,7 +89,7 @@ const Volunteer = () => {
               <Card className="text-center">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                    <Heart className="text-accent" size={24} />
+                    <Users className="text-accent" size={24} />
                   </div>
                   <h3 className="font-bold mb-2 text-foreground">Make Impact</h3>
                   <p className="text-sm text-muted-foreground">Create meaningful change in communities</p>
@@ -261,7 +261,7 @@ const Volunteer = () => {
                   </Button>
 
                   <p className="text-xs text-center text-muted-foreground">
-                    By submitting this form, you agree to be contacted by Hope Foundation regarding volunteer opportunities.
+                    By submitting this form, you agree to be contacted by Mahaseva Sahayog Foundation regarding volunteer opportunities.
                   </p>
                 </form>
               </CardContent>

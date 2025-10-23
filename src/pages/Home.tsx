@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Users, Award, Target, ArrowRight } from "lucide-react";
+import { Users, Award, Target, ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-home.jpg";
@@ -10,8 +10,8 @@ import healthcareImage from "@/assets/campaign-healthcare.jpg";
 
 const Home = () => {
   const stats = [
-    { icon: Users, value: "50,000+", label: "Lives Impacted" },
-    { icon: Heart, value: "2,500+", label: "Active Donors" },
+  { icon: Users, value: "50,000+", label: "Lives Impacted" },
+  { icon: Users, value: "2,500+", label: "Active Donors" },
     { icon: Target, value: "120+", label: "Projects Completed" },
     { icon: Award, value: "15+", label: "Awards Won" },
   ];
@@ -96,7 +96,7 @@ const Home = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Our Mission</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Hope Foundation is dedicated to creating sustainable change by empowering underserved communities 
+              Mahaseva Sahayog Foundation is dedicated to creating sustainable change by empowering underserved communities 
               through comprehensive education programs, accessible healthcare services, and economic development 
               initiatives. We believe every individual deserves the opportunity to thrive and reach their full potential.
             </p>

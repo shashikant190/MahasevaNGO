@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <div className="mb-4">
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logo} alt="Mahaseva Sahayog Foundation Logo" className="h-12 w-12" />
               <span className="text-xl font-bold">Mahaseva Sahayog Foundation</span>
             </div>
             <p className="text-sm text-secondary-foreground/80 mb-4">

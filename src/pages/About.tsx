@@ -1,13 +1,13 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Heart, Users } from "lucide-react";
+import { Target, Eye, Users } from "lucide-react";
 import teamImage from "@/assets/team.jpg";
 
 const About = () => {
   const values = [
     {
-      icon: Heart,
+      icon: Users,
       title: "Compassion",
       description: "We lead with empathy and understanding in all our initiatives."
     },
@@ -43,7 +43,7 @@ const About = () => {
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">About Hope Foundation</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">About Mahaseva Sahayog Foundation</h1>
             <p className="text-xl text-muted-foreground">
               Building a better tomorrow through compassion, dedication, and sustainable community development.
             </p>
@@ -58,7 +58,7 @@ const About = () => {
             <h2 className="text-4xl font-bold mb-6 text-foreground">Our Story</h2>
             <div className="space-y-4 text-lg text-muted-foreground">
               <p>
-                Founded in 2005, Hope Foundation emerged from a simple yet powerful vision: to create lasting 
+                Founded in 2005, Mahaseva Sahayog Foundation emerged from a simple yet powerful vision: to create lasting 
                 change in underserved communities across India. What began as a small group of volunteers 
                 providing educational support to 20 children has grown into a comprehensive organization 
                 impacting over 50,000 lives annually.
@@ -70,7 +70,7 @@ const About = () => {
                 healthcare, and economic empowerment.
               </p>
               <p>
-                Today, Hope Foundation operates across 12 states, partnering with local communities, 
+                Today, Mahaseva Sahayog Foundation operates across 12 states, partnering with local communities, 
                 government bodies, and corporate partners to create sustainable solutions that address 
                 the root causes of inequality and provide pathways to prosperity.
               </p>
@@ -147,7 +147,7 @@ const About = () => {
           <div className="mb-12 max-w-4xl mx-auto">
             <img 
               src={teamImage} 
-              alt="Hope Foundation Team" 
+              alt="Mahaseva Sahayog Foundation Team" 
               className="w-full rounded-lg shadow-xl"
             />
           </div>

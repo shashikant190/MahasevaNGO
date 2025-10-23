@@ -159,10 +159,10 @@ const CampaignEducation = () => {
                               type="button"
                               onClick={() => {
                                 setDonationAmount(amount);
-                                setCustomAmount("");
+                                setCustomAmount(amount);
                               }}
                               className={`py-3 rounded-lg border-2 font-semibold transition-all ${
-                                donationAmount === amount && !customAmount
+                                customAmount === amount
                                   ? "border-primary bg-primary text-primary-foreground"
                                   : "border-border hover:border-primary"
                               }`}

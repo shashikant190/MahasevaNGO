@@ -174,18 +174,18 @@ const Campaigns = () => {
                 Whether it's ₹500 or ₹50,000, your donation helps us reach more communities and create sustainable change.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  variant="hero" 
-                  size="lg" 
+                <Button
+                  variant="hero"
+                  size="lg"
                   className="bg-white text-primary hover:bg-white/90 text-lg px-8"
                   asChild
                 >
                   <Link to="/campaign/education">Start Donating</Link>
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="border-2 border-white text-white hover:bg-white/20 text-lg px-8"
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="bg-white text-primary hover:bg-white/90 text-lg px-8"
                   asChild
                 >
                   <Link to="/volunteer">Volunteer Instead</Link>

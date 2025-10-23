@@ -63,6 +63,23 @@ const Awards = () => {
     }
   ];
 
+  // Local Maharashtra-themed images placed in public/maharashtra/ (fallback to previous remote URLs if needed)
+  const localMah = [
+    "/maharashtra/img1.svg",
+    "/maharashtra/img2.svg",
+    "/maharashtra/img3.svg",
+    "/maharashtra/img4.svg"
+  ];
+
+  const remoteMah = [
+    "https://images.unsplash.com/photo-1600431521021-ecb78b3f6d26?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6c9d8f6a3d2a4f0d7a4a8b5b1e5f2c3a",
+    "https://images.unsplash.com/photo-1549921296-3a87f6a8f3a4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2d7a4f4b8b9a6c5d4e3f2a1b0c9d8e7f",
+    "https://images.unsplash.com/photo-1526481280698-34d6a8f4b8a3?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8a7b6c5d4e3f2a1b0c9d8e7f6a5b4c3d",
+    "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3f2e1d0c9b8a7b6c5d4e3f2a1b0c9d8e"
+  ];
+
+  const mahImages = localMah.map((p, i) => p || remoteMah[i]);
+
   const recognitions = [
     "Registered under Section 80G for tax exemption benefits",
     "NITI Aayog Darpan Portal Registration",
@@ -139,6 +156,16 @@ const Awards = () => {
                         </div>
                         
                         <div className="flex-grow">
+                          {/* If we have a corresponding image, show it above the award description */}
+                          {mahImages[index] && (
+                            <div className="mb-4">
+                              <img
+                                src={mahImages[index]}
+                                alt={`${award.title} - Maharashtra`}
+                                className="w-full h-48 object-cover rounded-lg shadow-sm"
+                              />
+                            </div>
+                          )}
                           <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
                             <div>
                               <h3 className="text-2xl font-bold mb-1 text-foreground">{award.title}</h3>
@@ -232,13 +259,18 @@ const Awards = () => {
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {["The Times of India", "Hindustan Times", "Indian Express", "NDTV"].map((media, index) => (
+              {[
+                { name: "The Times of India", img: mahImages[0] },
+                { name: "Hindustan Times", img: mahImages[1] },
+                { name: "Indian Express", img: mahImages[2] },
+                { name: "NDTV", img: mahImages[3] }
+              ].map((media, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary mx-auto mb-3 flex items-center justify-center text-white text-2xl font-bold">
-                      {media.substring(0, 2)}
+                    <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-3">
+                      <img src={media.img} alt={media.name} className="w-full h-full object-cover" />
                     </div>
-                    <p className="font-semibold text-sm text-foreground">{media}</p>
+                    <p className="font-semibold text-sm text-foreground text-center">{media.name}</p>
                   </CardContent>
                 </Card>
               ))}

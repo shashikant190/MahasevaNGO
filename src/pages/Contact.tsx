@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import SimpleMap from "@/components/SimpleMap";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -219,17 +220,13 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section (Placeholder) */}
+      {/* Map Section */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin size={48} className="text-primary mx-auto mb-4" />
-                  <p className="text-lg font-semibold text-foreground mb-2">Interactive Map</p>
-                  <p className="text-sm text-muted-foreground">Map integration coming soon</p>
-                </div>
+              <div className="p-6">
+                <SimpleMap />
               </div>
             </Card>
           </div>

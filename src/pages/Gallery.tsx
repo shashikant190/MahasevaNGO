@@ -24,7 +24,7 @@ const Gallery = () => {
 
   const videos = [
     {
-      title: "Hope Foundation - Year in Review 2024",
+  title: "Mahaseva Sahayog Foundation - Year in Review 2024",
       src: heroImage,
       duration: "5:32",
       description: "A comprehensive look at our achievements and impact in 2024"
